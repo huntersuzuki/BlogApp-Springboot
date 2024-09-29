@@ -10,10 +10,10 @@ import lombok.Data;
 @Data
 public class Blog {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String AuthorName;
-    private double AuthorPhone;
+    private long AuthorPhone;
     private String AuthorCity;
     private String AuthorState;
     private String BlogName;

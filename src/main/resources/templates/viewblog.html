@@ -16,12 +16,42 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><h1>Author Name: <span th:text="${blog.AuthorName}"></span></h1></li>
-      <li class="list-group-item"><h2>Author Contact: <span th:text="${blog.AuthorPhone}"></span></h2></li>
-      <li class="list-group-item"><h1 th:text="${blog.BlogName}"></h1></li>
-      <li class="list-group-item"><h2 th:text="${blog.BlogDescription}"></h2></li>
-    </ul>
+  <body class="bg bg-dark">
+    <a href="/" class="btn btn-primary">Back to home</a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center mt-5">
+          <label for="AuthorName" class="text text-light fs-2">
+            Author Name:
+            <h1 th:text="${blog.AuthorName}" class="display-1"></h1>
+          </label>
+        </div>
+        <div class="col-md-6 rounded offset-3 text-center mt-4 bg bg-light">
+          <label for="AuthorContact" class="text text-dark fs-4 me-5">
+            Author Contact
+            <h1 th:text="${blog.AuthorPhone}" class="fs-4 text-center"></h1>
+          </label>
+          <label for="AuthorCity" class="text text-dark fs-4 me-5">
+            Author City
+            <h1 th:text="${blog.AuthorCity}" class="fs-4 text-center"></h1>
+          </label>
+          <label for="AuthorState" class="text text-dark fs-4 me-5">
+            Author AuthorState
+            <h1 th:text="${blog.AuthorState}" class="fs-4 text-center"></h1>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <label for="BlogName"> <h3 class="text text-light mt-5">Blog Name:</h3></label>
+          <h1 th:text="${blog.BlogName}" class="text text-light mt-1"></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text text-light fs-3 text-center mt-5 text-break">
+          <strong th:text="${blog.BlogDescription}" ></strong>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
